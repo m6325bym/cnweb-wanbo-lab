@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>万博体育 · 站点介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(145deg, #fde9d9 0%, #fbd6b7 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .page-wrapper {
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    /* 白色卡片样式 */
+    .card {
+      background: #ffffff;
+      border-radius: 32px;
+      box-shadow: 0 12px 28px rgba(140, 80, 30, 0.12), 0 4px 10px rgba(0, 0, 0, 0.04);
+      padding: 2.4rem 2.8rem;
+      margin-bottom: 2.2rem;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 20px 40px rgba(180, 100, 40, 0.14), 0 6px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    /* hero 区域特别 */
+    .hero-card {
+      padding: 3.2rem 2.8rem;
+      background: linear-gradient(to bottom right, #fffaf6, #ffffff);
+      border-bottom: 3px solid #f3c9a8;
+    }
+
+    .hero-title {
+      font-size: 2.6rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: #6b3f1c;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: #8e603b;
+      max-width: 600px;
+      margin: 0.6rem 0 1rem;
+      line-height: 1.6;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: #efd6bf;
+      color: #4f2f14;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.25rem 1rem;
+      border-radius: 40px;
+      letter-spacing: 0.4px;
+      margin-top: 0.3rem;
+    }
+
+    /* 通用章节标题 */
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #4f2f14;
+      margin-bottom: 1.2rem;
+      border-left: 6px solid #dba175;
+      padding-left: 0.9rem;
+    }
+
+    .section-title-sm {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #5e3a1e;
+      margin: 1rem 0 0.6rem;
+    }
+
+    /* 文字排版 */
+    p {
+      color: #3a2a1c;
+      line-height: 1.7;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .text-muted {
+      color: #6f523b;
+      font-size: 0.95rem;
+    }
+
+    .list-bullet {
+      padding-left: 1.2rem;
+      margin: 0.6rem 0 1rem;
+    }
+
+    .list-bullet li {
+      margin-bottom: 0.45rem;
+      color: #3f2d1b;
+      line-height: 1.6;
+      list-style-type: "· ";
+    }
+
+    /* 圆角按钮感链接 */
+    a.btn-link {
+      display: inline-block;
+      background: #e7c7ac;
+      color: #3f2612;
+      font-weight: 550;
+      padding: 0.4rem 1.2rem;
+      border-radius: 60px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: background 0.2s, transform 0.1s;
+      border: 1px solid transparent;
+      line-height: 1.5;
+    }
+
+    a.btn-link:hover {
+      background: #dab494;
+      transform: scale(1.02);
+      border-color: #bc8d68;
+    }
+
+    /* FAQ 摘要卡片 */
+    .faq-item {
+      margin-bottom: 1.2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #efe4d9;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      color: #4f2f14;
+      margin-bottom: 0.3rem;
+      font-size: 1rem;
+    }
+
+    .faq-a {
+      color: #4a3727;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem 2rem;
+      margin-top: 0.8rem;
+      padding: 0.8rem 0;
+    }
+
+    .footer-links a {
+      color: #6f4b2c;
+      text-decoration: none;
+      font-size: 0.9rem;
+      border-bottom: 1px dotted #bc8d68;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #3f2612;
+      border-bottom-style: solid;
+    }
+
+    .footnote {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #7b624a;
+      margin-top: 2rem;
+      border-top: 1px solid #e0cdbb;
+      padding-top: 1.2rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 700px) {
+      .card {
+        padding: 1.8rem 1.2rem;
+      }
+      .hero-card {
+        padding: 2rem 1.2rem;
+      }
+      .hero-title {
+        font-size: 2rem;
+      }
+      .section-title {
+        font-size: 1.3rem;
+      }
+      .footer-links {
+        gap: 0.8rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 1rem 0.6rem;
+      }
+      .hero-title {
+        font-size: 1.7rem;
+      }
+      .hero-sub {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- HERO 区 -->
+  <div class="card hero-card">
+    <div class="hero-tag">站点 · 可靠说明</div>
+    <h1 class="hero-title">关于万博体育</h1>
+    <p class="hero-sub">
+      <a href="https://cnweb-wanbo.com" class="btn-link" style="margin-right: 0.2rem;">万博体育</a> 
+      是一个面向中文用户的体育信息与服务平台。我们坚持从信息透明、内容可信的角度出发，为用户提供有价值的体育资讯和实用指引。
+    </p>
+    <p style="margin-top: 0.2rem; font-size: 0.95rem; color: #7a5d45;">
+      本页旨在为您清晰介绍站点的定位、服务特点以及常见疑问，帮助您快速建立认知。
+    </p>
+  </div>
+
+  <!-- 优势区 + 说明区 合并为两个卡片，但内容有承接 -->
+  <div class="card">
+    <h2 class="section-title">站点定位与优势</h2>
+    <p>
+      万博体育自建立以来，始终围绕“准确、清晰、易用”三个原则组织内容。不同于追求噱头的资讯站，我们更看重信息的结构化与可追溯性。无论是赛事动态、运动科普还是平台使用指引，都经过多层核验。
+    </p>
+    <ul class="list-bullet">
+      <li><strong>信息筛选</strong> – 从多个公开信源交叉比对，降低误导性内容出现概率。</li>
+      <li><strong>持续更新</strong> – 栏目内容保持合理的更新节奏，避免陈旧信息堆积。</li>
+      <li><strong>界面友好</strong> – 版式注重可读性，减少无关干扰，让你更快找到所需。</li>
+    </ul>
+    <p>
+      同时，我们非常重视用户的信任。站点采用 HTTPS 传输，并在内容中明确标注参考来源或提示，方便您自行判断。如果你对某一篇文章或功能有疑问，可以通过页面底部的渠道反馈给我们。
+    </p>
+  </div>
+
+  <div class="card">
+    <h2 class="section-title">内容场景与说明</h2>
+    <p>
+      很多用户关心“这个站点适合哪些人使用？”简单来说，无论你是体育爱好者、运动入门者，还是希望了解平台功能的访客，<a href="https://cnweb-wanbo.com" style="color: #8f5f39; text-decoration: underline; text-underline-offset: 3px; font-weight: 500;">万博体育</a> 都能提供对应的内容模块。
+    </p>
+    <p>
+      我们的内容主要覆盖：体育项目科普（规则、术语、历史）、赛事简要回顾、运动安全提示、以及平台常见操作说明。所有内容都尽量避免主观评价，侧重事实与参考信息。例如在介绍某项运动规则时，会同时说明不同赛制的差异，帮助用户建立更全面的理解。
+    </p>
+    <p>
+      需要说明的是，本站不提供任何形式的投注、博彩引导或金融承诺。所有内容仅供信息参考，请用户根据自身情况理性判断。
+    </p>
+  </div>
+
+  <!-- FAQ 摘要区 -->
+  <div class="card">
+    <h2 class="section-title">常见疑问摘要</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q1: 万博体育的信息来源可靠吗？</div>
+      <div class="faq-a">我们主要参考公开体育媒体、官方规则手册以及经过验证的行业资料，并在关键位置标注参考。同时会定期复核过时内容，尽量保持信息时效性。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q2: 网站是否需要注册或付费？</div>
+      <div class="faq-a">目前站内大部分内容均可直接浏览，无需注册。部分互动功能或个性化服务可能会在后续完善，届时会明确告知权限与条件。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q3: 我看到一些链接指向外部站点，安全吗？</div>
+      <div class="faq-a">本站链接均经过人工筛选，但外部网站的内容与安全不受我们控制。建议点击前留意地址栏，避免在不熟悉的页面输入个人敏感信息。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q4: 如果发现内容有误，如何反馈？</div>
+      <div class="faq-a">你可通过页面底部预留的联系方式（邮件或留言板）提交纠错信息，我们确认后会尽快修正。</div>
+    </div>
+
+    <p style="margin-top: 1rem; font-size: 0.9rem; color: #6f523b;">
+      以上仅为部分常见疑问汇总，更完整 FAQ 请访问站内帮助栏目。
+    </p>
+  </div>
+
+  <!-- 底部链接区 -->
+  <div style="background: #ffffff; border-radius: 32px; padding: 1.2rem 2rem; box-shadow: 0 6px 20px rgba(120, 70, 30, 0.08);">
+    <div class="footer-links">
+      <a href="https://cnweb-wanbo.com">万博体育</a>
+      <a href="#">站点地图</a>
+      <a href="#">内容说明</a>
+      <a href="#">使用条款</a>
+      <a href="#">隐私声明</a>
+      <a href="#">联系反馈</a>
+    </div>
+    <div class="footnote">
+      本页为站点介绍，内容仅供说明参考 · 万博体育 · 真实可信
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
