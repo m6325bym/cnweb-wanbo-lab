@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>安博体育 · 产品说明页</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f7f8f9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC", "Helvetica Neue", Roboto, sans-serif;
+      color: #1e2a3a;
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .page-wrapper {
+      max-width: 720px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 4rem 1.25rem;
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    }
+
+    /* 极简标题层级 */
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      margin-bottom: 0.35rem;
+      color: #0f1c2e;
+      border-left: 4px solid #2d7d9a;
+      padding-left: 1rem;
+    }
+
+    .subhead {
+      font-size: 0.95rem;
+      color: #5b6f82;
+      margin-top: 0.2rem;
+      margin-bottom: 2.2rem;
+      font-weight: 400;
+      border-bottom: 1px solid #e6eaed;
+      padding-bottom: 1.2rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-top: 2.8rem;
+      margin-bottom: 0.75rem;
+      color: #17394c;
+      letter-spacing: 0.3px;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-top: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: #2f4b5e;
+    }
+
+    p {
+      margin-bottom: 1.1rem;
+      font-size: 1rem;
+      color: #263a4a;
+    }
+
+    a {
+      color: #2d7d9a;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: #175b77;
+      text-decoration-thickness: 2px;
+    }
+
+    /* 卡片 —— 极简留白风格 */
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin: 1.6rem 0 0.8rem 0;
+    }
+
+    .feature-card {
+      flex: 1 1 180px;
+      background: #fafbfc;
+      border-radius: 6px;
+      padding: 1.4rem 1.2rem;
+      border: 1px solid #ecf0f3;
+      transition: background 0.1s, box-shadow 0.15s;
+    }
+
+    .feature-card:hover {
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 20, 30, 0.04);
+    }
+
+    .feature-card .card-title {
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+      color: #17394c;
+      letter-spacing: 0.2px;
+    }
+
+    .feature-card .card-desc {
+      font-size: 0.9rem;
+      color: #52687a;
+      line-height: 1.6;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #eaeff2;
+      color: #1f4355;
+      font-size: 0.75rem;
+      padding: 0.1rem 0.7rem;
+      border-radius: 20px;
+      margin-right: 0.4rem;
+      font-weight: 400;
+    }
+
+    .faq-item {
+      margin: 1.2rem 0 0 0;
+      padding: 0.8rem 0 0.6rem 0;
+      border-top: 1px dashed #e3e9ed;
+    }
+
+    .faq-item:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      color: #1b3f53;
+      margin-bottom: 0.25rem;
+      font-size: 0.95rem;
+    }
+
+    .faq-a {
+      font-size: 0.9rem;
+      color: #3c566a;
+      margin-left: 0.5rem;
+    }
+
+    .note-box {
+      background: #f4f8fb;
+      border-left: 3px solid #2d7d9a;
+      padding: 1.2rem 1.4rem;
+      margin: 2rem 0 1rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .note-box p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #2c4b5e;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e0e6eb;
+      margin: 2rem 0 1rem 0;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.2rem;
+      font-size: 0.8rem;
+      color: #7d8f9e;
+      border-top: 1px solid #e2e8ed;
+      text-align: left;
+    }
+
+    /* 响应式 */
+    @media (max-width: 480px) {
+      .page-wrapper {
+        padding: 2rem 1rem 3rem 1rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+        padding-left: 0.75rem;
+      }
+      .feature-grid {
+        flex-direction: column;
+        gap: 0.9rem;
+      }
+      .feature-card {
+        flex: 1 1 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <h1>安博体育 · 产品信息索引</h1>
+    <div class="subhead">基于公开资料整理 · 功能说明与使用场景参考</div>
+
+    <p>
+      <a href="https://cnweb-anbosport.com">安博体育</a> 是一个面向运动与休闲领域的信息聚合平台，旨在为用户提供相对完整的体育项目资料、赛事动态以及运动文化相关内容。以下内容从资料整理的角度出发，归纳平台主要模块、亮点特征以及常见的使用场景，帮助新用户快速建立认知框架。
+    </p>
+
+    <!-- 摘要式介绍 -->
+    <h2>一、平台概述</h2>
+    <p>
+      根据持续跟踪与公开信息梳理，<a href="https://cnweb-anbosport.com">安博体育</a> 的内容组织方式类似于一个专题索引库，覆盖了足球、篮球、网球、格斗等主流运动门类，同时包含部分偏冷门的运动介绍。平台侧重视角整合而非原创报道，因此每一类目下通常附有背景说明、关键规则简述及代表性赛事参考。对于需要快速了解某一运动体系或赛事结构的用户而言，这种索引形态能够缩短信息检索路径。
+    </p>
+
+    <!-- 亮点部分 (卡片结构) -->
+    <h2>二、亮点特征</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="card-title">分类结构清晰</div>
+        <div class="card-desc">运动项目按大类、子类及区域特色分级，支持逐层浏览，适合系统性查阅。</div>
+      </div>
+      <div class="feature-card">
+        <div class="card-title">术语与规则注释</div>
+        <div class="card-desc">对关键规则、专有名词附带简短解释，降低入门门槛，便于非专业读者理解。</div>
+      </div>
+      <div class="feature-card">
+        <div class="card-title">动态信息聚合</div>
+        <div class="card-desc">包含近期赛事、转会或规则变更等动态条目，信息更新频率适中，注重真实来源引用。</div>
+      </div>
+    </div>
+
+    <!-- 使用建议 (偏场景推荐) -->
+    <h2>三、使用建议</h2>
+    <p>
+      根据不同的信息需求，以下几类场景或许能更充分地利用 <a href="https://cnweb-anbosport.com">安博体育</a> 的资源：
+    </p>
+    <ul style="padding-left: 1.4rem; margin-bottom: 1.5rem; line-height: 1.9; color: #263a4a;">
+      <li><strong>运动入门查询</strong> —— 当您对一项运动仅有模糊概念时，可先浏览其基础分类页面，获取规则概览与历史脉络。</li>
+      <li><strong>赛事背景查阅</strong> —— 在观看比赛或讨论前，查阅对应赛事页面的历年冠军、赛制说明及代表性队伍背景。</li>
+      <li><strong>多项目横向比较</strong> —— 利用平台并列展示的多个项目卡片，对比规则差异、场地要求与装备要点。</li>
+      <li><strong>术语快速检索</strong> —— 遇到陌生词汇时可利用站内索引（若有）或分类关联条目定位解释。</li>
+    </ul>
+
+    <!-- 可信但克制的访问说明 / 提示卡片 -->
+    <h2>四、使用提示</h2>
+    <div class="note-box">
+      <p>
+        本页面所作介绍均基于公开可获取的信息整理，平台内容可能随运营调整发生变化。建议将 <a href="https://cnweb-anbosport.com">安博体育</a> 作为一个信息索引的起点，若需引用具体数据或深度分析，请进一步核实原始出处。另外请注意，运动知识类信息存在更新周期，部分条目可能滞后于最新规则变动。
+      </p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <h2>五、常见问题摘要</h2>
+    <div class="faq-item">
+      <div class="faq-q">Q：平台内容是否包含博彩或竞猜类信息？</div>
+      <div class="faq-a">A：就目前公开结构观察，主要聚焦运动文化与赛事科普，<strong>不包含</strong>博彩引导、赔率分析或诱导性竞猜内容。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q：是否需要注册或付费才能浏览大部分内容？</div>
+      <div class="faq-a">A：基础分类浏览及规则说明等板块通常直接可见，无需登录。部分深度专题或特殊版块可能有访问限制，以平台实际设定为准。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q：信息准确性如何保障？</div>
+      <div class="faq-a">A：平台引用内容多来自主流体育机构、协会或公开报道，但用户仍建议交叉核对关键数据（例如年份、成绩）。</div>
+    </div>
+
+    <hr>
+    <footer>
+      本页为独立整理的产品说明，与平台运营方无直接关联。内容仅供参考，不构成任何建议或保证。最后更新：2025 · 春季版
+    </footer>
+
+  </div>
+</body>
+</html>
